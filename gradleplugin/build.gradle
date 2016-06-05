@@ -1,0 +1,29 @@
+repositories {
+    mavenLocal()
+}
+
+apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+
+compileGroovy.options.encoding = 'UTF-8'
+
+group = 'com.andreabergia.sample.gradleplugin'
+version = '1.0.0-SNAPSHOT'
+
+dependencies {
+    compile localGroovy()
+    compile gradleApi()
+}
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}

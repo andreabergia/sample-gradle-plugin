@@ -1,0 +1,23 @@
+repositories {
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.andreabergia.sample.gradleplugin:gradleplugin:1.0.0-SNAPSHOT'
+    }
+}
+
+
+group = 'com.andreabergia.sample.gradleplugin'
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'gradle-sample'
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}
