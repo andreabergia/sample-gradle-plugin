@@ -21,3 +21,6 @@ apply plugin: 'gradle-sample'
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
 }
+
+
+sayHi.message = "Ho ho ho"
