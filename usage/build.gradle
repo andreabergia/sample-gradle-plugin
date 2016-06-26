@@ -23,4 +23,6 @@ task wrapper(type: Wrapper) {
 }
 
 
-sayHi.message = "Ho ho ho"
+samplePlugin {
+    message "Hello"
+}
